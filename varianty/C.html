@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CARC – úvodní stránka, varianta C</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;display=swap">
+<style>
+
+body{margin:0;background:#FFFFFF}
+a{color:#2F7A24}a:hover{color:#16301E}
+</style>
+
+<!--LOCALFONTS-->
+</head>
+<body>
+
+
+<div style="width: 100%; background: #FFFFFF; color: #1A1F1A; font-family: Archivo, system-ui, sans-serif; font-size: 17px; line-height: 1.55">
+
+<!-- Utility row -->
+<div style="border-bottom: 1px solid #E4E8DF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 8px 32px; display: flex; justify-content: flex-end; gap: 24px; font-size: 13px; font-weight: 600; flex-wrap: wrap">
+<a href="#" style="color: #1A1F1A; text-decoration: none">Lidé</a>
+<a href="#" style="color: #1A1F1A; text-decoration: none">Kariéra</a>
+<a href="#" style="color: #1A1F1A; text-decoration: none">Kontakt</a>
+<a href="#" style="color: #2F7A24; text-decoration: none">English</a>
+</div>
+</div>
+
+<!-- Centered logo + nav -->
+<header style="padding: 28px 32px 0; display: flex; flex-direction: column; align-items: center; gap: 22px">
+<a href="#" style="display: flex; align-items: center; gap: 16px; text-decoration: none; color: #16301E">
+<img src="img/logo.png" alt="" style="width: 56px; height: 64px; object-fit: contain">
+<span style="display: flex; flex-direction: column">
+<span style="font-weight: 900; font-size: 34px; letter-spacing: 2px; line-height: 1">CARC</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.4px; color: #555E55; margin-top: 4px">Národní centrum zemědělského a potravinářského výzkumu</span>
+</span>
+</a>
+<nav aria-label="Hlavní menu" style="width: 100%; max-width: 1240px; border-top: 1px solid #E4E8DF; border-bottom: 3px solid #16301E; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 34px; padding: 14px 0; font-size: 13px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase">
+<a href="#" style="color: #16301E; text-decoration: none">O nás</a>
+<a href="#" style="color: #16301E; text-decoration: none">Naše věda</a>
+<a href="#" style="color: #16301E; text-decoration: none">Zařízení a služby</a>
+<a href="#" style="color: #16301E; text-decoration: none">Data a zdroje</a>
+<a href="#" style="color: #16301E; text-decoration: none">Spolupráce</a>
+<a href="#" style="color: #16301E; text-decoration: none">Aktuality</a>
+<a href="#" style="color: #16301E; text-decoration: none">Akce</a>
+</nav>
+</header>
+
+<!-- Page header with honeycomb -->
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 32px 72px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #2F7A24">Aplikovaný výzkum pro zemědělství</span>
+<h1 style="margin: 0; font-weight: 900; font-size: 76px; line-height: 0.95; letter-spacing: -1px; text-transform: uppercase; color: #16301E">Věda pro pole i talíř</h1>
+<div aria-hidden="true" style="width: 120px; height: 8px; background: linear-gradient(90deg, #66A741, #DEB73E)"></div>
+<p style="margin: 0; font-size: 22px; line-height: 1.45; color: #2B332B; max-width: 560px">Jsme největší výzkumná organizace v resortu zemědělství. Propojujeme výzkum zemědělství, potravin, životního prostředí a bioekonomiky – a jeho výsledky předáváme do praxe.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="#" style="color: #FFFFFF; background: #16301E; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase; padding: 15px 24px">Naše věda</a><a href="#poradenstvi" style="color: #16301E; background: #DEB73E; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase; padding: 15px 24px">Poradenství pro praxi</a></div>
+</div>
+<div role="img" aria-label="Mozaika fotografií z výzkumu CARC ve tvaru šestiúhelníků" style="flex: 0 0 556px; position: relative; width: 556px; height: 536px; max-width: 100%">
+<img src="img/aerial.jpg" alt="" style="position: absolute; left: 94px; top: 0; width: 180px; height: 208px; object-fit: cover; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)">
+<img src="img/seeds.jpg" alt="" style="position: absolute; left: 282px; top: 0; width: 180px; height: 208px; object-fit: cover; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)">
+<div style="position: absolute; left: 0; top: 164px; width: 180px; height: 208px; background: linear-gradient(90deg, #66A741, #DEB73E); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"></div>
+<img src="img/logo.png" alt="" style="position: absolute; left: 188px; top: 164px; width: 180px; height: 208px; object-fit: contain">
+<img src="img/petri1.jpg" alt="" style="position: absolute; left: 376px; top: 164px; width: 180px; height: 208px; object-fit: cover; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)">
+<img src="img/vine3.jpg" alt="" style="position: absolute; left: 94px; top: 328px; width: 180px; height: 208px; object-fit: cover; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)">
+<svg aria-hidden="true" width="180" height="208" viewBox="0 0 180 208" style="position: absolute; left: 282px; top: 328px"><defs><linearGradient id="hexg1" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#66A741"></stop><stop offset="1" stop-color="#DEB73E"></stop></linearGradient></defs><polygon points="90,3 177,53 177,155 90,205 3,155 3,53" fill="none" stroke="url(#hexg1)" stroke-width="5"></polygon></svg>
+</div>
+</section>
+
+<!-- Feed -->
+<section aria-label="Z CARC" style="background: #F3F5EF; border-top: 1px solid #E4E8DF; border-bottom: 1px solid #E4E8DF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 56px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<a href="#" style="background: #FFFFFF; text-decoration: none; color: #1A1F1A; display: flex; flex-direction: column">
+<img src="img/ears.jpg" alt="Zralé klasy pšenice pod modrou oblohou" style="width: 100%; height: 170px; object-fit: cover; display: block">
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; border-top: 5px solid #66A741"><span style="font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: #2F7A24">Věda</span><span style="font-weight: 800; font-size: 17px; line-height: 1.3; text-transform: uppercase; color: #16301E">Pšenice a voda v suchu</span><span style="font-size: 15px; color: #555E55">Jak efektivně hospodaří pšenice s vodou.</span><span style="font-size: 13px; color: #555E55">6. 11. 2026</span></div>
+</a>
+<a href="#" style="background: #FFFFFF; text-decoration: none; color: #1A1F1A; display: flex; flex-direction: column">
+<img src="img/men2.jpg" alt="Výzkumníci pracují se sazenicemi v laboratoři" style="width: 100%; height: 170px; object-fit: cover; display: block">
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; border-top: 5px solid #A9C23F"><span style="font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: #5C6F12">Tisková zpráva</span><span style="font-weight: 800; font-size: 17px; line-height: 1.3; text-transform: uppercase; color: #16301E">Z laboratoře až do šálku čaje</span><span style="font-size: 15px; color: #555E55">Věda o rostlinách v každodenním životě.</span><span style="font-size: 13px; color: #555E55">5. 11. 2026</span></div>
+</a>
+<a href="#" style="background: #FFFFFF; text-decoration: none; color: #1A1F1A; display: flex; flex-direction: column">
+<img src="img/soil2.jpg" alt="Hrst půdy v dlani" style="width: 100%; height: 170px; object-fit: cover; display: block">
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; border-top: 5px solid #CDBA3D"><span style="font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: #6B5B0E">Webinář</span><span style="font-weight: 800; font-size: 17px; line-height: 1.3; text-transform: uppercase; color: #16301E">Hnojiva a bilance živin</span><span style="font-size: 15px; color: #555E55">Podzimní série pro zemědělskou praxi.</span><span style="font-size: 13px; color: #555E55">4. 11. 2026</span></div>
+</a>
+<a href="#" style="background: #FFFFFF; text-decoration: none; color: #1A1F1A; display: flex; flex-direction: column">
+<img src="img/beakers.jpg" alt="Kádinky s rostlinnými extrakty" style="width: 100%; height: 170px; object-fit: cover; display: block">
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; border-top: 5px solid #DEB73E"><span style="font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: #7A5E0C">Poradna</span><span style="font-weight: 800; font-size: 17px; line-height: 1.3; text-transform: uppercase; color: #16301E">Co se děje ve vašem zeláku?</span><span style="font-size: 15px; color: #555E55">Poradna s odbornicí CARC 14. 11.</span><span style="font-size: 13px; color: #555E55">11. 11. 2026</span></div>
+</a>
+</div>
+</section>
+
+<!-- Our goals -->
+<section id="poradenstvi" style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<div style="flex: 1 1 480px; min-width: 0; position: relative">
+<img src="img/gh2people.jpg" alt="Agronomové s tabletem ve skleníku" style="width: 100%; height: 440px; object-fit: cover; display: block; clip-path: polygon(0 0, 82% 0, 100% 22%, 100% 100%, 18% 100%, 0 78%)">
+<div aria-hidden="true" style="position: absolute; left: -14px; bottom: -14px; width: 84px; height: 97px; background: linear-gradient(90deg, #66A741, #DEB73E); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"></div>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; font-weight: 900; font-size: 44px; letter-spacing: -0.5px; text-transform: uppercase; color: #16301E; line-height: 1">Poradenství pro praxi</h2>
+<div aria-hidden="true" style="width: 72px; height: 6px; background: linear-gradient(90deg, #66A741, #DEB73E)"></div>
+<p style="margin: 0; font-size: 19px; color: #2B332B">Výsledky výzkumu převádíme do postupů a nástrojů pro zemědělce, poradce i veřejnost.</p>
+<div style="display: flex; flex-direction: column">
+<a href="#" style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #E4E8DF; text-decoration: none; color: #16301E; font-weight: 800; text-transform: uppercase; font-size: 15px">Certifikované metodiky <span aria-hidden="true" style="color: #2F7A24">›</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #E4E8DF; text-decoration: none; color: #16301E; font-weight: 800; text-transform: uppercase; font-size: 15px">Bilance živin a organické hmoty <span aria-hidden="true" style="color: #2F7A24">›</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #E4E8DF; text-decoration: none; color: #16301E; font-weight: 800; text-transform: uppercase; font-size: 15px">Služby a analýzy <span aria-hidden="true" style="color: #2F7A24">›</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #E4E8DF; border-bottom: 1px solid #E4E8DF; text-decoration: none; color: #16301E; font-weight: 800; text-transform: uppercase; font-size: 15px">Kontakty na poradce <span aria-hidden="true" style="color: #2F7A24">›</span></a>
+</div>
+</div>
+</section>
+
+<!-- Our science: honeycomb -->
+<section id="veda" style="background: #16301E; color: #E6ECE2; overflow: hidden">
+<div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; font-weight: 900; font-size: 44px; letter-spacing: -0.5px; text-transform: uppercase; color: #FFFFFF; line-height: 1">Naše věda</h2>
+<div aria-hidden="true" style="width: 72px; height: 6px; background: linear-gradient(90deg, #66A741, #DEB73E)"></div>
+<p style="margin: 0; font-size: 19px; color: #C8D2C3">Šest oborů do sebe zapadá jako buňky plástu: od genetiky a zdraví rostlin přes půdu a techniku až po potraviny a víno.</p>
+<a href="#" style="align-self: flex-start; color: #16301E; background: #DEB73E; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase; padding: 14px 22px">Všechny obory</a>
+</div>
+<div style="flex: 0 0 872px; max-width: 100%; position: relative; width: 872px; height: 494px">
+
+<a href="#" aria-label="Genetika a šlechtění" style="position: absolute; left: 0px; top: 0px; width: 240px; height: 277px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; overflow: hidden; background: #0E1F13">
+<img src="img/seeds.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55">
+<span style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0 30px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: #E2C35E">Odbor</span>
+<span style="font-weight: 900; font-size: 21px; line-height: 1.1; text-transform: uppercase; color: #FFFFFF">Genetika a šlechtění</span>
+</span>
+</a>
+
+<a href="#" aria-label="Ochrana plodin a zdraví rostlin" style="position: absolute; left: 248px; top: 0px; width: 240px; height: 277px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; overflow: hidden; background: linear-gradient(90deg, #66A741, #DEB73E)">
+
+<span style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0 30px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: #16301E">Odbor</span>
+<span style="font-weight: 900; font-size: 21px; line-height: 1.1; text-transform: uppercase; color: #16301E">Ochrana plodin a zdraví rostlin</span>
+</span>
+</a>
+
+<a href="#" aria-label="Hospodaření na půdě" style="position: absolute; left: 496px; top: 0px; width: 240px; height: 277px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; overflow: hidden; background: #0E1F13">
+<img src="img/soil2.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55">
+<span style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0 30px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: #E2C35E">Odbor</span>
+<span style="font-weight: 900; font-size: 21px; line-height: 1.1; text-transform: uppercase; color: #FFFFFF">Hospodaření na půdě</span>
+</span>
+</a>
+
+<a href="#" aria-label="Potravinářství" style="position: absolute; left: 124px; top: 207px; width: 240px; height: 277px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; overflow: hidden; background: #0E1F13">
+<img src="img/tubes.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55">
+<span style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0 30px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: #E2C35E">Odbor</span>
+<span style="font-weight: 900; font-size: 21px; line-height: 1.1; text-transform: uppercase; color: #FFFFFF">Potravinářství</span>
+</span>
+</a>
+
+<a href="#" aria-label="Zemědělská technika" style="position: absolute; left: 372px; top: 207px; width: 240px; height: 277px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; overflow: hidden; background: #0E1F13">
+<img src="img/tractor3.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55">
+<span style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0 30px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: #E2C35E">Odbor</span>
+<span style="font-weight: 900; font-size: 21px; line-height: 1.1; text-transform: uppercase; color: #FFFFFF">Zemědělská technika</span>
+</span>
+</a>
+
+<a href="#" aria-label="Vinařství Karlštejn" style="position: absolute; left: 620px; top: 207px; width: 240px; height: 277px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; overflow: hidden; background: #DEB73E">
+
+<span style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0 30px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: #16301E">Stanice</span>
+<span style="font-weight: 900; font-size: 21px; line-height: 1.1; text-transform: uppercase; color: #16301E">Vinařství Karlštejn</span>
+</span>
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- Our impact -->
+<section style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px; align-items: flex-end; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 620px">
+<h2 style="margin: 0; font-weight: 900; font-size: 44px; letter-spacing: -0.5px; text-transform: uppercase; color: #16301E; line-height: 1">Náš dopad</h2>
+<div aria-hidden="true" style="width: 72px; height: 6px; background: linear-gradient(90deg, #66A741, #DEB73E)"></div>
+<p style="margin: 0; font-size: 19px; color: #2B332B">Výsledky, které se dostanou na pole, do sadů, do potravinářských provozů i na talíř.</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<div style="display: flex; gap: 20px; align-items: center">
+<div style="width: 120px; height: 139px; flex-shrink: 0; position: relative; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="120" height="139" viewBox="0 0 120 139" style="position: absolute; inset: 0"><defs><linearGradient id="hexg2" x1="0" x2="1"><stop offset="0" stop-color="#66A741"></stop><stop offset="1" stop-color="#DEB73E"></stop></linearGradient></defs><polygon points="60,3 117,36 117,103 60,136 3,103 3,36" fill="none" stroke="url(#hexg2)" stroke-width="5"></polygon></svg>
+<span style="position: relative; font-weight: 900; font-size: 22px; color: #16301E">40 000+</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 800; text-transform: uppercase; color: #16301E">Genová banka</span><span style="font-size: 15px; color: #555E55">genetických zdrojů rostlin v dlouhodobém úložišti</span></div>
+</div>
+<div style="display: flex; gap: 20px; align-items: center">
+<div style="width: 120px; height: 139px; flex-shrink: 0; position: relative; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="120" height="139" viewBox="0 0 120 139" style="position: absolute; inset: 0"><polygon points="60,3 117,36 117,103 60,136 3,103 3,36" fill="#66A741"></polygon></svg>
+<span style="position: relative; font-weight: 900; font-size: 18px; color: #FFFFFF; text-transform: uppercase">Ruztop</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 800; text-transform: uppercase; color: #16301E">Nová odrůda</span><span style="font-size: 15px; color: #555E55">topinambur pro potraviny, krmiva i energetiku</span></div>
+</div>
+<div style="display: flex; gap: 20px; align-items: center">
+<div style="width: 120px; height: 139px; flex-shrink: 0; position: relative; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="120" height="139" viewBox="0 0 120 139" style="position: absolute; inset: 0"><polygon points="60,3 117,36 117,103 60,136 3,103 3,36" fill="#DEB73E"></polygon></svg>
+<span style="position: relative; font-weight: 900; font-size: 15px; color: #16301E; text-transform: uppercase; text-align: center; line-height: 1.1">Zlatý<br>klas</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 800; text-transform: uppercase; color: #16301E">Ocenění</span><span style="font-size: 15px; color: #555E55">pro novou technologii zavlažování, už slouží na polích</span></div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 24px">
+<img src="img/tractor3.jpg" alt="Traktor v poli z výšky" style="width: 100%; height: 380px; object-fit: cover; display: block; clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 86%)">
+<img src="img/gh2people.jpg" alt="Agronomové s tabletem ve skleníku" style="width: 100%; height: 380px; object-fit: cover; display: block; clip-path: polygon(0 0, 88% 0, 100% 14%, 100% 100%, 0 100%)">
+</div>
+</section>
+
+<!-- Events -->
+<section style="background: #F3F5EF; border-top: 1px solid #E4E8DF; border-bottom: 1px solid #E4E8DF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 88px 32px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px"><h2 style="margin: 0; font-weight: 900; font-size: 44px; text-transform: uppercase; color: #16301E; line-height: 1">Akce</h2><div aria-hidden="true" style="width: 72px; height: 6px; background: linear-gradient(90deg, #66A741, #DEB73E)"></div></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<a href="#" style="background: #FFFFFF; display: flex; gap: 18px; align-items: center; padding: 18px; text-decoration: none; color: #16301E"><span style="width: 70px; height: 81px; flex-shrink: 0; background: #16301E; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1"><span style="font-weight: 900; font-size: 24px; color: #DEB73E">19</span><span style="font-size: 11px; font-weight: 800; text-transform: uppercase">lis</span></span><span style="display: flex; flex-direction: column"><span style="font-weight: 800; text-transform: uppercase; font-size: 15px">Objemná krmiva a výživa skotu</span><span style="font-size: 14px; color: #555E55">Jevíčko</span></span></a>
+<a href="#" style="background: #FFFFFF; display: flex; gap: 18px; align-items: center; padding: 18px; text-decoration: none; color: #16301E"><span style="width: 70px; height: 81px; flex-shrink: 0; background: #16301E; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1"><span style="font-weight: 900; font-size: 24px; color: #DEB73E">24</span><span style="font-size: 11px; font-weight: 800; text-transform: uppercase">lis</span></span><span style="display: flex; flex-direction: column"><span style="font-weight: 800; text-transform: uppercase; font-size: 15px">Pěstování česneku: výzkum a praxe</span><span style="font-size: 14px; color: #555E55">Praha</span></span></a>
+<a href="#" style="background: #FFFFFF; display: flex; gap: 18px; align-items: center; padding: 18px; text-decoration: none; color: #16301E"><span style="width: 70px; height: 81px; flex-shrink: 0; background: linear-gradient(90deg, #66A741, #DEB73E); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); color: #16301E; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1"><span style="font-weight: 900; font-size: 24px">3</span><span style="font-size: 11px; font-weight: 800; text-transform: uppercase">pro</span></span><span style="display: flex; flex-direction: column"><span style="font-weight: 800; text-transform: uppercase; font-size: 15px">Pšenice 2026</span><span style="font-size: 14px; color: #555E55">Národní seminář · Praha</span></span></a>
+</div>
+</div>
+</section>
+
+<!-- Join us -->
+<section style="max-width: 1240px; margin: 0 auto; padding: 88px 32px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-weight: 900; font-size: 44px; letter-spacing: -0.5px; text-transform: uppercase; color: #16301E; line-height: 1">Přidejte se</h2>
+<p style="margin: 0; font-size: 19px; color: #2B332B">Sledujte nás, přijďte na akci, nebo s námi pracujte.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+<a href="#" style="width: 52px; height: 60px; background: #16301E; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)">FB</a>
+<a href="#" style="width: 52px; height: 60px; background: #16301E; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)">YT</a>
+<a href="#" style="width: 52px; height: 60px; background: #16301E; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)">IN</a>
+<a href="#" style="margin-left: 12px; color: #16301E; background: #DEB73E; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase; padding: 16px 24px">Volná místa</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer style="background: #16301E; color: #C8D2C3; font-size: 14px">
+<div aria-hidden="true" style="height: 8px; background: linear-gradient(90deg, #66A741, #DEB73E)"></div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 32px 28px; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: #FFFFFF; margin-right: 12px">Zřizovatel a partneři</span>
+<span style="border: 1px dashed #4C6A55; padding: 10px 18px; font-size: 13px">[logo MZe]</span>
+<span style="border: 1px dashed #4C6A55; padding: 10px 18px; font-size: 13px">[logo partnera]</span>
+<span style="border: 1px dashed #4C6A55; padding: 10px 18px; font-size: 13px">[logo HR Award]</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 13px">O nás</span><a href="#" style="color: #C8D2C3; text-decoration: none">Struktura</a><a href="#" style="color: #C8D2C3; text-decoration: none">Historie</a><a href="#" style="color: #C8D2C3; text-decoration: none">Kariéra</a><a href="#" style="color: #C8D2C3; text-decoration: none">Pro média</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 13px">Věda a služby</span><a href="#" style="color: #C8D2C3; text-decoration: none">Odbory a týmy</a><a href="#" style="color: #C8D2C3; text-decoration: none">Referenční laboratoře</a><a href="#" style="color: #C8D2C3; text-decoration: none">Poradenství</a><a href="#" style="color: #C8D2C3; text-decoration: none">Data a zdroje</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 13px">Kontakt</span><span>Drnovská 507/73<br>161 00 Praha 6 – Ruzyně</span><a href="mailto:carc@carc.cz" style="color: #E2C35E">carc@carc.cz</a><span>233 022 111</span></div>
+</div>
+<div style="border-top: 1px solid #2E4A36; padding-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: 13px">
+<span>© 2026 Národní centrum zemědělského a potravinářského výzkumu, v. v. i. · IČO 00027006</span>
+<span style="display: flex; gap: 18px; flex-wrap: wrap"><a href="#" style="color: #C8D2C3">Ochrana osobních údajů</a><a href="#" style="color: #C8D2C3">Přístupnost</a><a href="#" style="color: #C8D2C3">Mapa stránek</a></span>
+</div>
+</div>
+</footer>
+
+</div>
+
+<a href="../index.html" style="position:fixed;left:16px;bottom:16px;z-index:999;background:#16301E;color:#fff;font:600 15px system-ui,sans-serif;text-decoration:none;padding:12px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25)">‹ Zpět na přehled · Varianta C</a>
+</body>
+</html>

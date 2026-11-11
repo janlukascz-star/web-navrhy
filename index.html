@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nový web CARC – návrhy designu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+  :root { --ink:#16301E; --text:#1F2620; --muted:#55605A; --line:#E2E7DC; --bg:#F5F7F2; --green:#2F7A24; --g1:#66A741; --g2:#DEB73E; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, sans-serif; font-size:16px; line-height:1.55; }
+  a { color: var(--green); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  header { background:#fff; border-bottom:1px solid var(--line); }
+  header .wrap { display:flex; align-items:center; gap:14px; min-height:68px; }
+  header img { width:34px; height:39px; object-fit:contain; }
+  header strong { font-size:18px; color:var(--ink); }
+  .bar { height:6px; background:linear-gradient(90deg,var(--g1),var(--g2)); }
+  .hero { padding:48px 0 28px; }
+  h1 { margin:0 0 12px; font-size:clamp(30px,5vw,48px); line-height:1.08; letter-spacing:-.8px; color:var(--ink); }
+  .lede { margin:0; font-size:18px; color:var(--muted); max-width:720px; }
+  .meta { margin-top:16px; display:flex; flex-wrap:wrap; gap:10px 20px; font-size:14px; color:var(--muted); }
+  .btn { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 22px; border-radius:999px; border:0; background:var(--ink); color:#fff; font:600 16px Inter, sans-serif; text-decoration:none; cursor:pointer; }
+  .btn.alt { background:#fff; color:var(--ink); border:1px solid var(--ink); }
+  .btn[disabled] { opacity:.5; cursor:default; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:24px 0 8px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:20px; overflow:hidden; display:flex; flex-direction:column; }
+  .card img { width:100%; aspect-ratio: 1440 / 1000; height:auto; object-fit:cover; object-position: top; display:block; border-bottom:1px solid var(--line); }
+  a.card { color: inherit; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+  a.card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(22,48,30,.14); }
+  a.card:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+  .card .open { margin-top: 4px; font-weight: 700; color: var(--green); }
+  .card .body { padding:20px; display:flex; flex-direction:column; gap:10px; }
+  .tag { font-size:12px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--green); }
+  .card h3 { margin:0; font-size:22px; color:var(--ink); }
+  .sw { display:flex; gap:6px; }
+  .sw span { width:26px; height:26px; border-radius:6px; border:1px solid rgba(0,0,0,.08); }
+  .card ul { margin:0; padding-left:18px; color:var(--muted); font-size:15px; }
+  section.block { background:#fff; border:1px solid var(--line); border-radius:24px; padding:28px; margin:24px 0; }
+  h2 { margin:0 0 6px; font-size:24px; color:var(--ink); }
+  .hint { margin:0 0 18px; color:var(--muted); font-size:15px; }
+  .choices { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+  .choice { display:flex; align-items:center; gap:12px; border:2px solid var(--line); border-radius:16px; padding:14px 16px; cursor:pointer; font-weight:600; min-height:56px; }
+  .choice input { width:20px; height:20px; accent-color: var(--green); }
+  .choice:has(input:checked) { border-color: var(--green); background:#F0F6EC; }
+  .rate { display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; padding:12px 0; border-top:1px solid var(--line); }
+  .rate:first-of-type { border-top:0; }
+  .rate .lbl { width:220px; font-weight:600; }
+  .stars { display:flex; gap:6px; }
+  .stars button { width:44px; height:44px; border-radius:12px; border:1px solid var(--line); background:#fff; font:700 16px Inter, sans-serif; color:var(--ink); cursor:pointer; }
+  .stars button[aria-pressed="true"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+  label.f { display:block; font-weight:600; margin:18px 0 6px; }
+  textarea, select { width:100%; border:1px solid #CBD3C6; border-radius:12px; padding:12px 14px; font:16px Inter, sans-serif; background:#fff; color:var(--text); }
+  textarea { min-height:110px; resize:vertical; }
+  .actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:22px; }
+  .status { font-weight:600; }
+  .status.ok { color:var(--green); }
+  .status.err { color:#A3361F; }
+  .notice { background:#FFF7E0; border:1px solid #EBD9A0; border-radius:14px; padding:14px 16px; color:#5B4A12; margin-top:12px; }
+  .res-row { display:flex; align-items:center; gap:12px; margin:10px 0; }
+  .res-row .name { width:180px; font-weight:600; }
+  .res-row .track { flex:1; height:26px; background:#EEF2EA; border-radius:8px; overflow:hidden; }
+  .res-row .fill { height:100%; background:linear-gradient(90deg,var(--g1),var(--g2)); }
+  .res-row .num { width:110px; text-align:right; font-variant-numeric: tabular-nums; color:var(--muted); }
+  .comments { list-style:none; margin:12px 0 0; padding:0; }
+  .comments li { border-top:1px solid var(--line); padding:12px 0; }
+  .comments small { color:var(--muted); display:block; }
+  footer { padding:32px 0 48px; color:var(--muted); font-size:14px; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><img src="img/logo.png" alt=""><strong>CARC</strong></div></header>
+<div class="bar" aria-hidden="true"></div>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Nový web CARC: šest návrhů designu</h1>
+    <p class="lede">Prohlédněte si šest variant nového webu. Hlasovat můžete ve formuláři – odkaz najdete níže.</p>
+    <div class="meta"><span>Hlasování do: <strong>[DATUM]</strong></span></div>
+    <p style="margin:20px 0 0; display:flex; flex-wrap:wrap; gap:12px; align-items:center"><span style="color:var(--muted)">Klepnutím na kartu otevřete úvodní stránku varianty.</span><a class="btn" href="[ODKAZ NA FORMULÁŘ]">Hlasovat ve formuláři</a></p>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="varianty/A.html" aria-label="Otevřít úvodní stránku varianty A">
+      <img src="img/nahled-A.jpg" alt="Náhled úvodní stránky varianty A">
+      <div class="body">
+        <span class="tag">Varianta A</span>
+        <h3>Terénní</h3>
+        <div class="sw" aria-label="Barvy: tmavě zelená, zelená, pšeničná žlutá, světlá"><span style="background:#13261B"></span><span style="background:#2D6A35"></span><span style="background:#E8B931"></span><span style="background:#F5F6F0"></span></div>
+        <ul><li>Zemité barvy, motiv pokusných parcel</li><li>Výrazné nadpisy, přátelský tón</li><li>Rozcestník pro zemědělce, vědce, firmy i veřejnost</li></ul>
+<span class="open">Otevřít úvodní stránku ›</span>
+      </div>
+    </a>
+    <a class="card" href="varianty/B.html" aria-label="Otevřít úvodní stránku varianty B">
+      <img src="img/nahled-B.jpg" alt="Náhled úvodní stránky varianty B">
+      <div class="body">
+        <span class="tag">Varianta B</span>
+        <h3>Čistý minimalismus</h3>
+        <div class="sw" aria-label="Barvy: bílá, světle šedá, zelená a zlatá z loga, černá"><span style="background:#FFFFFF"></span><span style="background:#F5F5F7"></span><span style="background:#66A741"></span><span style="background:#DEB73E"></span><span style="background:#1D1D1F"></span></div>
+        <ul><li>Styl Apple: hodně prostoru, velké fotky</li><li>Barvy loga jen jako akcent</li><li>Velká typografie, krátké věty</li></ul>
+<span class="open">Otevřít úvodní stránku ›</span>
+      </div>
+    </a>
+    <a class="card" href="varianty/C.html" aria-label="Otevřít úvodní stránku varianty C">
+      <img src="img/nahled-C.jpg" alt="Náhled úvodní stránky varianty C">
+      <div class="body">
+        <span class="tag">Varianta C</span>
+        <h3>Institucionální, plástev z loga</h3>
+        <div class="sw" aria-label="Barvy: tmavě lesní zelená, zelená, zlatá, bílá"><span style="background:#16301E"></span><span style="background:#66A741"></span><span style="background:#DEB73E"></span><span style="background:#FFFFFF"></span></div>
+        <ul><li>Volná inspirace webem Rothamsted Research</li><li>Šestiúhelník z loga jako grafický motiv</li><li>Nadpisy velkými písmeny, výrazná struktura</li></ul>
+<span class="open">Otevřít úvodní stránku ›</span>
+      </div>
+    </a>
+    <a class="card" href="varianty/D.html" aria-label="Otevřít úvodní stránku varianty D">
+      <img src="img/nahled-D.jpg" alt="Náhled úvodní stránky varianty D">
+      <div class="body">
+        <span class="tag">Varianta D</span>
+        <h3>Klasická vědecká instituce</h3>
+        <div class="sw" aria-label="Barvy: bílá, tmavě zelená, zelená a zlatá z loga, světle šedozelená"><span style="background:#FFFFFF"></span><span style="background:#1E2B22"></span><span style="background:#66A741"></span><span style="background:#DEB73E"></span><span style="background:#F4F6F1"></span></div>
+        <ul><li>Věrně podle Rothamsted Research</li><li>Logo uprostřed, menu velkými písmeny</li><li>Pás karet s obsahem, klidné čtení v jednom sloupci</li></ul>
+<span class="open">Otevřít úvodní stránku ›</span>
+      </div>
+    </a>
+    <a class="card" href="varianty/E.html" aria-label="Otevřít úvodní stránku varianty E">
+      <img src="img/nahled-E.jpg" alt="Náhled úvodní stránky varianty E">
+      <div class="body">
+        <span class="tag">Varianta E</span>
+        <h3>Vlídná a otevřená</h3>
+        <div class="sw" aria-label="Barvy: krémová, bílá, tmavě zelená, zelená a zlatá z loga"><span style="background:#F5F1E3"></span><span style="background:#FFFFFF"></span><span style="background:#1E2B22"></span><span style="background:#2E6B2A"></span><span style="background:#DEB73E"></span></div>
+        <ul><li>Inspirace webem Wageningen University &amp; Research</li><li>Video v úvodu, pole Hledejte nebo se zeptejte</li><li>Zaoblené karty, témata a rozcestníky</li></ul>
+<span class="open">Otevřít úvodní stránku ›</span>
+      </div>
+    </a>
+    <a class="card" href="varianty/F.html" aria-label="Otevřít úvodní stránku varianty F">
+      <img src="img/nahled-F.jpg" alt="Náhled úvodní stránky varianty F">
+      <div class="body">
+        <span class="tag">Varianta F</span>
+        <h3>Imerzivní příroda</h3>
+        <div class="sw" aria-label="Barvy: noční zelená, písková, zelená a zlatá z loga"><span style="background:#0E1C13"></span><span style="background:#F3F1E6"></span><span style="background:#66A741"></span><span style="background:#DEB73E"></span></div>
+        <ul><li>Inspirace whoi.edu: tmavý web, fotky přes celou šířku</li><li>Velké verzálkové titulky „Naše půda. Naše potraviny. Naše budoucnost.“</li><li>Aktuality jako příspěvky, velké dlaždice projektů a témat</li></ul>
+<span class="open">Otevřít úvodní stránku ›</span>
+      </div>
+    </a>
+  </div>
+
+</main>
+<footer class="wrap">Návrhy redesignu webu Národního centra zemědělského a potravinářského výzkumu. Ilustrační koncepty – texty a fotografie nejsou finální.</footer>
+
+</body>
+</html>
